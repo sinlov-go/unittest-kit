@@ -55,6 +55,15 @@ $ echo "go mod vendor"
 
 ## Features
 
+- [x] `env_kit` package
+    - `env_kit.FetchOsEnv*` and `env_kit.SetEnv*` for env get or set
+    - `env_kit.FindAllEnv4Print`, `env_kit.FindAllEnvByPrefix`, `env_kit.FindAllEnv4PrintAsSortJust` for find print env string
+    - `env_kit.MustHasEnvSetByArray` use in unit test env setting check 
+- [x] `unittest_file_kit`
+    - `unittest_file_kit.TestGoldenKit` for golden data test
+- [x] `unittest_random_kit`
+    - `unittest_random_kit.RandomStr` for random string
+    - `unittest_random_kit.RandomInt` for random int
 - [ ] more perfect test case coverage
 - [ ] more perfect benchmark case
 
