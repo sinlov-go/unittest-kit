@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [convention-change-log](https://github.com/convention-change/convention-change-log) for commit guidelines.
 
+## [1.1.0](https://github.com/sinlov-go/unittest-kit/compare/1.0.0...v1.1.0) (2024-02-27)
+
+### ✨ Features
+
+* add full env_kit env set and fetch method ([ce557199](https://github.com/sinlov-go/unittest-kit/commit/ce557199c9296a1fdfbc51e3f6ec0c82b10a9d1a))
+
 ## 1.0.0 (2024-02-24)
 
 ### ✨ Features
