@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [convention-change-log](https://github.com/convention-change/convention-change-log) for commit guidelines.
 
+## [1.1.1](https://github.com/sinlov-go/unittest-kit/compare/1.1.0...v1.1.1) (2024-08-30)
+
+### 👷‍ Build System
+
+* automate dependabot PRs and adjust update schedules- Enable auto-merge for Dependabot pull requests on minor and patch updates. ([e978eba0](https://github.com/sinlov-go/unittest-kit/commit/e978eba06e4f24a466ce21cd3226fd65ce9bdf0b))
+
+* bump github.com/sebdah/goldie/v2 from 2.5.3 to 2.5.5 ([504e91dd](https://github.com/sinlov-go/unittest-kit/commit/504e91dd09504b515d2bcf76a18978e270211393))
+
+* bump golangci/golangci-lint-action from 5 to 6 ([8acbea82](https://github.com/sinlov-go/unittest-kit/commit/8acbea829352ddcdf1818d2fead40eedf7bf3293))
+
+* bump golangci/golangci-lint-action from 4 to 5 ([d9717d8d](https://github.com/sinlov-go/unittest-kit/commit/d9717d8de2bafd88b52e93fe23f4bdc6cddc0ebb))
+
+* bump convention-change/conventional-version-check ([d5f10cd9](https://github.com/sinlov-go/unittest-kit/commit/d5f10cd97565999e550aebf037c74d6ff0ce3440))
+
+* bump github.com/stretchr/testify from 1.8.4 to 1.9.0 ([83d5fc4d](https://github.com/sinlov-go/unittest-kit/commit/83d5fc4d928fb80c95bd30e43e81e5d5ed7f353c))
+
 ## [1.1.0](https://github.com/sinlov-go/unittest-kit/compare/1.0.0...v1.1.0) (2024-02-27)
 
 ### ✨ Features
