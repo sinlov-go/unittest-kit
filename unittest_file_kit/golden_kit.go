@@ -85,7 +85,7 @@ func (g *TestGoldenKit) GoldenDataSaveFast(t *testing.T, data interface{}, extra
 	if errJson != nil {
 		t.Fatal(errJson)
 	}
-	return g.GoldenDataSave(t, marshal, extraName, os.FileMode(0766))
+	return g.GoldenDataSave(t, marshal, extraName, os.FileMode(0o666))
 }
 
 // GoldenDataSave

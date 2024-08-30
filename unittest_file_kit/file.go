@@ -48,7 +48,7 @@ func ReadFileAsJson(path string, v interface{}) error {
 //	write bytes to file
 //	path most use Abs Path
 //	data []byte
-//	fileMod os.FileMode(0666) or os.FileMode(0644)
+//	fileMod os.FileMode(0o666) or os.FileMode(0o644)
 //	coverage true will coverage old
 func WriteFileByByte(path string, data []byte, fileMod fs.FileMode, coverage bool) error {
 	if !coverage {
@@ -62,7 +62,7 @@ func WriteFileByByte(path string, data []byte, fileMod fs.FileMode, coverage boo
 	}
 	parentPath := filepath.Dir(path)
 	if !PathExistsFast(parentPath) {
-		err := os.MkdirAll(parentPath, fileMod)
+		err := os.MkdirAll(parentPath, FetchDefaultFolderFileMode())
 		if err != nil {
 			return fmt.Errorf("can not WriteFileByByte at new dir at mode: %v , at parent path: %v", fileMod, parentPath)
 		}
@@ -78,7 +78,7 @@ func WriteFileByByte(path string, data []byte, fileMod fs.FileMode, coverage boo
 //
 //	path most use Abs Path
 //	v data
-//	fileMod os.FileMode(0666) or os.FileMode(0644)
+//	fileMod os.FileMode(0o666) or os.FileMode(0o644)
 //	coverage true will coverage old
 //	beauty will format json when write
 func WriteFileAsJson(path string, v interface{}, fileMod fs.FileMode, coverage, beauty bool) error {
@@ -110,5 +110,5 @@ func WriteFileAsJson(path string, v interface{}, fileMod fs.FileMode, coverage, 
 //
 //	write json file as 0766 and beauty
 func WriteFileAsJsonBeauty(path string, v interface{}, coverage bool) error {
-	return WriteFileAsJson(path, v, os.FileMode(0766), coverage, true)
+	return WriteFileAsJson(path, v, os.FileMode(0o666), coverage, true)
 }
