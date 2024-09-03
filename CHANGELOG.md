@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [convention-change-log](https://github.com/convention-change/convention-change-log) for commit guidelines.
 
+## [1.2.1](https://github.com/sinlov-go/unittest-kit/compare/1.2.0...v1.2.1) (2024-09-03)
+
+### 👷‍ Build System
+
+* add `golang-codecov.yml` ([bda27880](https://github.com/sinlov-go/unittest-kit/commit/bda278808425e81fc5e30a76ae6bfb20fc69f7c7))
+
 ## [1.2.0](https://github.com/sinlov-go/unittest-kit/compare/1.1.1...v1.2.0) (2024-09-03)
 
 ### 🐛 Bug Fixes
