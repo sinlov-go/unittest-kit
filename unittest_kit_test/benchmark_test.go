@@ -7,6 +7,7 @@ import (
 	"github.com/sinlov-go/unittest-kit/unittest_random_kit"
 	"github.com/stretchr/testify/assert"
 	"strings"
+	"sync"
 	"testing"
 )
 
@@ -23,15 +24,58 @@ func initStrData() {
 }
 
 func TestRandomStr(t *testing.T) {
+	var wg sync.WaitGroup
 	for i := 0; i < 10; i++ {
-		t.Logf("randomStr: %s", unittest_random_kit.RandomStr(16))
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			t.Logf("RandomStr: %s", unittest_random_kit.RandomStr(16))
+		}()
 	}
+	wg.Wait()
 }
 
 func TestRandomInt(t *testing.T) {
+	var wg sync.WaitGroup
 	for i := 0; i < 10; i++ {
-		t.Logf("randomInt: %d", unittest_random_kit.RandomInt(1024))
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			t.Logf("RandomInt: %d", unittest_random_kit.RandomInt(1024))
+		}()
+
 	}
+	wg.Wait()
+}
+
+func TestRandomCryptoStr(t *testing.T) {
+	var wg sync.WaitGroup
+	for i := 0; i < 10; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			str, err := unittest_random_kit.RandomCryptoStr(16)
+			if err != nil {
+				t.Errorf("RandomCryptoStr: %v", err)
+				return
+			}
+			t.Logf("RandomCryptoStr: %s", str)
+		}()
+	}
+	wg.Wait()
+}
+
+func TestRandomCryptoStrFast(t *testing.T) {
+	var wg sync.WaitGroup
+	for i := 0; i < 10; i++ {
+		wg.Add(1)
+		go func() {
+			defer wg.Done()
+			str := unittest_random_kit.RandomCryptoStrFast(16)
+			t.Logf("RandomCryptoStrFast: %s", str)
+		}()
+	}
+	wg.Wait()
 }
 
 func BenchmarkExampleBasic(b *testing.B) {
