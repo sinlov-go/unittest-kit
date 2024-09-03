@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [convention-change-log](https://github.com/convention-change/convention-change-log) for commit guidelines.
 
+## [1.2.0](https://github.com/sinlov-go/unittest-kit/compare/1.1.1...v1.2.0) (2024-09-03)
+
+### 🐛 Bug Fixes
+
+* unittest_random_kit Random seed at same time ([c94bb5c6](https://github.com/sinlov-go/unittest-kit/commit/c94bb5c66caedbfe1cef86a2ac427fad1ec4959b)), fix [#7](https://github.com/sinlov-go/unittest-kit/issues/7)
+
+### ✨ Features
+
+* generate secure random strings using crypto/rand ([5dc5e1f5](https://github.com/sinlov-go/unittest-kit/commit/5dc5e1f505181c4eaf7a22a6ac81b21bb1a5162d))
+
 ## [1.1.1](https://github.com/sinlov-go/unittest-kit/compare/1.1.0...v1.1.1) (2024-08-30)
 
 ### 👷‍ Build System
