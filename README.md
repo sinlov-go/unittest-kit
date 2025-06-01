@@ -58,7 +58,7 @@ $ echo "go mod vendor"
 - [x] `env_kit` package
     - `env_kit.FetchOsEnv*` and `env_kit.SetEnv*` for env get or set
     - `env_kit.FindAllEnv4Print`, `env_kit.FindAllEnvByPrefix`, `env_kit.FindAllEnv4PrintAsSortJust` for find print env string
-    - `env_kit.MustHasEnvSetByArray` use in unit test env setting check 
+    - `env_kit.MustHasEnvSetByArray` use in unit test env setting check
 - [x] `unittest_file_kit`
     - `unittest_file_kit.TestGoldenKit` for golden data test
 - [x] `unittest_random_kit`
@@ -70,7 +70,7 @@ $ echo "go mod vendor"
 ## env
 
 - minimum go version: go 1.19
-- change `go 1.19`, `^1.19`, `1.19.12-bullseye`, `1.19.12` to new go version
+- change `go 1.19`, `^1.19`, `1.19.13` to new go version
 
 ### libs
 
