@@ -29,6 +29,7 @@ func RandomStr(cnt uint) string {
 // RandomInt
 // support parallel
 // new random int by max, seed by time.Now().UnixNano()
+// nolint: predeclared
 func RandomInt(max int) int {
 	mu.Lock()
 	rs := rand.New(rand.NewSource(time.Now().UnixNano()))

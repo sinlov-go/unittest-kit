@@ -99,6 +99,7 @@ func FetchDefaultFolderFileMode() fs.FileMode {
 			return os.FileMode(0o777)
 		}
 		defaultFOlderCode := 0o777
+		// nolint: unconvert
 		nowOct := int(defaultFOlderCode) - int(umaskOct)
 		return os.FileMode(nowOct)
 	}
