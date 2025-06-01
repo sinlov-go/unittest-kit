@@ -80,6 +80,8 @@ func (g *TestGoldenKit) GetOrCreateTestDataFullPath(elem ...string) (string, err
 //
 //	save data to golden file
 //	style as: "TestFuncName/extraName.golden"
+//
+// nolint: thelper
 func (g *TestGoldenKit) GoldenDataSaveFast(t *testing.T, data interface{}, extraName string) error {
 	marshal, errJson := json.Marshal(data)
 	if errJson != nil {
@@ -92,6 +94,8 @@ func (g *TestGoldenKit) GoldenDataSaveFast(t *testing.T, data interface{}, extra
 //
 //	save data to golden file
 //	style as: "TestFuncName/extraName.golden"
+//
+// nolint: thelper
 func (g *TestGoldenKit) GoldenDataSave(t *testing.T, data []byte, extraName string, fileMod fs.FileMode) error {
 	testDataFolderFullPath, err := g.GetOrCreateTestDataFolderFullPath()
 	if err != nil {
@@ -121,6 +125,8 @@ func (g *TestGoldenKit) GoldenDataSave(t *testing.T, data []byte, extraName stri
 //
 //	read golden file as byte
 //	style as: "TestFuncName/extraName.golden"
+//
+// nolint: thelper
 func (g *TestGoldenKit) GoldenDataReadAsByte(t *testing.T, extraName string) ([]byte, error) {
 	savePath := filepath.Join(g.currentTestDataFolderAbsPath, t.Name(), fmt.Sprintf("%s.golden", extraName))
 	if !PathExistsFast(savePath) {
@@ -137,6 +143,8 @@ func (g *TestGoldenKit) GoldenDataReadAsByte(t *testing.T, extraName string) ([]
 //
 //	read golden file as type
 //	style as: "TestFuncName/extraName.golden"
+//
+// nolint: thelper
 func (g *TestGoldenKit) GoldenDataReadAsType(t *testing.T, extraName string, v interface{}) error {
 	readAsByte, err := g.GoldenDataReadAsByte(t, extraName)
 	if err != nil {
