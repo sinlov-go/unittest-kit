@@ -3,7 +3,7 @@ module github.com/sinlov-go/unittest-kit
 go 1.19
 
 require (
-	github.com/sebdah/goldie/v2 v2.7.1
+	github.com/sebdah/goldie/v2 v2.8.0
 	github.com/stretchr/testify v1.11.1
 )
 
